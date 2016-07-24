@@ -129,7 +129,8 @@ through **device\_id variable**. This table has 3252950 observations and
 </tbody>
 </table>
 
-**app\_labels table** has 459943 observations and 2 variables.
+**app\_labels table** has 459943 observations and 2 variables. No
+duplicated values are identified.
 
 <table style="width:35%;">
 <colgroup>
@@ -153,6 +154,8 @@ through **device\_id variable**. This table has 3252950 observations and
 </tr>
 </tbody>
 </table>
+
+However, there are 491 lines in this table that are duplicated.
 
 **app\_events table** is connected with **events table** with
 **event\_id variable** and **app\_labels table** with **app\_id
@@ -189,6 +192,8 @@ variable**. It has 32473067 observations and 4 variables.
 </tbody>
 </table>
 
+No duplicated rows are found in this table.
+
 **label\_categories table** is connected with **app\_labels table**. It
 has 930 observations and 2 variables.
 
@@ -214,3 +219,16 @@ has 930 observations and 2 variables.
 </tr>
 </tbody>
 </table>
+
+No duplicated rows are found in this table.
+
+### Data manipulation
+
+#### Connecting gender\_age table with phone.brand.device.model table
+
+The gender\_age table and phone.brand.device.model table are merged
+including all the lines in both sides.
+
+In the merged table, there are 186716 observations and 6 variables.
+Meaning that all the device ids in the user\_age time are present in the
+phone.brand.device.model table.
